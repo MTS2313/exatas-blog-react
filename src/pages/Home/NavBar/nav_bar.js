@@ -4,13 +4,37 @@ import ButtonLogo from "./Button_logo";
 import LinksBar from "./links_bar";
 import DarkButton from "./DarkButton";
 
-import "../css/NavBarCss.css";
+import "./Styles/NavBarCss.css";
 
 function NavBar() {
   const BarData = [
     {
       link: "#",
       name: "Home",
+    },
+    {
+      link:"#",
+      name:"Blog"
+    },
+    {
+      link:"#",
+      name:"Categories"
+    },
+    {
+      link:"#",
+      name:"Search"
+    },
+    {
+      link:"#",
+      name:"About-us"
+    },
+    {
+      link:"#",
+      name:"Help"
+    },
+    {
+      link:"#",
+      name:"Login"
     },
   ];
   return (

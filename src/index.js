@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./css/index.css";
+import "./index.css";
 
-import NavBar from "./objects/nav_bar.js"
+import NavBar from "./pages/Home/NavBar/nav_bar.js"
 
 
 ReactDOM.render(
@@ -10,4 +10,10 @@ ReactDOM.render(
     <NavBar/>
   </>,
   document.getElementById("menubar")
+);
+ReactDOM.render(
+  <>
+  
+  </>,
+document.getElementById("area_one")
 );
