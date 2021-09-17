@@ -1,0 +1,23 @@
+.nav_links_content {
+  display: flex;
+  align-items: center;
+}
+.nav_links_content a {
+  margin: 0px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "Pathway Gothic One", sans-serif;
+  color: #000000;
+  transition: top 1000ms;
+}
+.nav_links_content a h3{
+  font-style: normal;
+  font-weight: normal;
+}
+.nav_links_content a:hover{
+  position: relative;
+  top: 5px;
+  padding: 0;
+  text-decoration: underline;
+}

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
+
+.ButtonDark{
+    background-color: #000000;
+    color: #fff;
+    height: 40px;
+    border-style: none;
+    box-shadow:  10px 10px 5px rgba(0, 0, 0, 0.219);
+    transition: 1500ms;
+    cursor: pointer;
+
+}
+.ButtonDark h2{
+    margin: 6px 0px;
+    font-family: Pathway Gothic One, sans-serif;
+    font-weight: 400;
+}
+.ButtonDark:active{
+    background-color: #000000;
+    color: #fff;
+}
+.ButtonDark:hover{
+    background-color: #fff;
+    color: #000000;
+    box-shadow: unset;
+}
