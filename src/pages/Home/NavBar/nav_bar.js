@@ -20,22 +20,7 @@ function NavBar() {
       link:"#",
       name:"Categories"
     },
-    {
-      link:"#",
-      name:"Search"
-    },
-    {
-      link:"#",
-      name:"About-us"
-    },
-    {
-      link:"#",
-      name:"Help"
-    },
-    {
-      link:"#",
-      name:"Login"
-    },
+    
   ];
   return (
     <>

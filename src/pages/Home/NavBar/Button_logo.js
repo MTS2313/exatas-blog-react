@@ -5,7 +5,7 @@ class Button_logo extends React.Component {
   render() {
     return (
       <>
-        <a href="#" className="LogoA">
+        <a href="/" className="LogoA">
           <svg
             width="39"
             height="39"
@@ -30,10 +30,10 @@ class Button_logo extends React.Component {
               fill="white"
             />
           </svg>
-          <h3>
+          <h3 className="exatas">
             Exatas
-            <span className="blog">BLOG</span>
           </h3>
+            <h2 className="blog">BLOG</h2>
         </a>
       </>
     );
