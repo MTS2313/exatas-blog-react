@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
+.ButtonAll{
+  display: flex;
+  margin: 0px 10px;
+}
+.ButtonAll button a {
+  padding: 10px 40px;
+}
+.ButtonAll button a h2 {
+  font-family: Pathway Gothic One, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 28px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}

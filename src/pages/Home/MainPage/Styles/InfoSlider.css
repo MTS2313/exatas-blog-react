@@ -1,0 +1,55 @@
+.desc_text_slider{
+    width: 50%;
+    margin: 0% 0% 0% 3%;
+}
+.Buttons_A1_Control{
+    display: flex;
+}
+.SliderMainPageBlack-A1 {
+    background-color: #000;
+    border-style: none;
+}
+.SliderMainPageBlack-A1 a{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.SliderMainPageBlack-A1 h2{
+    color: #fff;
+    position: relative;
+}
+.SliderMainPageBlack-A1 svg{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    transition: 400ms left;
+    left: 15px;
+}
+.SliderMainPageBlack-A1 svg path{
+    fill: #fff;
+}
+.SliderMainPageBlack-A1:hover svg{
+    left: 20px  ;
+}
+
+.SliderMainPageTransparent-A1{
+    background-color: transparent;
+    border-style: none;
+}
+.SliderMainPageTransparent-A1 a {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.SliderMainPageTransparent-A1 svg{
+    height: 25px;
+    width: 25px;
+    position: relative;
+    transition: 400ms left;
+    left: 15px;
+}
+.SliderMainPageTransparent-A1:hover svg{
+    left: 20px;
+}

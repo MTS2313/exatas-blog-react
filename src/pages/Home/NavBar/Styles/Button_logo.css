@@ -8,12 +8,15 @@
   margin: 10px 10px;
   height: 45px;
   width: 165px;
+  
+  padding: 0px 10px;
+}
+.exatas{
   font-family: Nunito;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 25px;
-  padding: 0px 10px;
 }
 .blog {
   font-family: Pathway Gothic One, sans-serif;
@@ -21,6 +24,7 @@
   font-weight: normal;
   font-size: 30px;
   line-height: 28px;
+  margin-bottom: 24px;
 }
 .LogoA:hover {
   animation: buttonAnim 1s forwards;
