@@ -4,6 +4,7 @@ import "./index.css";
 
 import NavBar from "./pages/Home/NavBar/nav_bar.js"
 import MainPage from "./pages/Home/MainPage/index"
+import MiddleMain from "./pages/Home/MiddleMainPage/middleMainPage"
 
 
 ReactDOM.render(
@@ -17,4 +18,10 @@ ReactDOM.render(
   <MainPage/>
   </>,
 document.getElementById("area_one")
+);
+ReactDOM.render(
+  <>
+  <MiddleMain/>
+  </>,
+  document.getElementById("area_duo")
 );

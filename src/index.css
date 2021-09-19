@@ -24,8 +24,10 @@ main{
 #area_one{
   margin: 0% 7%;
   align-content: center;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+#area_duo{
+  margin-top: 10%;
 }

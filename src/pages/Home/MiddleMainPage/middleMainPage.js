@@ -1,5 +1,4 @@
 import React from "react";
-import { AiOutlineArrowRight, FaBeer } from "@react-icons/all-files/ai/AiOutlineArrowRight";
 import "./Styles/Content.css"
 
 
