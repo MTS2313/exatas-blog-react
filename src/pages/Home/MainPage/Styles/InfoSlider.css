@@ -1,6 +1,8 @@
 .desc_text_slider{
     width: 50%;
     margin: 0% 0% 0% 3%;
+    display: flex;
+    align-items: center;
 }
 .Buttons_A1_Control{
     display: flex;
@@ -52,4 +54,11 @@
 }
 .SliderMainPageTransparent-A1:hover svg{
     left: 20px;
+}
+.p_animation{
+    transition: 2s all;
+}
+.info_controlls{
+    display: flex;
+    flex-direction: column;
 }

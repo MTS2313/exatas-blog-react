@@ -4,7 +4,6 @@
 .MiddleMain-Main{
     font-family: Pathway Gothic One, sans-serif;
     padding:75px 70px; 
-    width: 90vw;
     justify-content: space-between;
     display: inline-flex;
     align-items: center;
@@ -17,6 +16,7 @@
 .MiddleMain-Image img{
     width: 30vw;
     height: 75vh;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.15);
     
 }
 .MiddleMain-Line{
@@ -39,6 +39,8 @@
     font-weight:200;
     padding-right: 50px;
     text-decoration-color: black;
+    outline: hidden;
+    color: black;
 }
 .MiddleMainTitle{
     font-size: 40px;

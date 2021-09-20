@@ -1,0 +1,16 @@
+.control_animation{
+    display: flex;
+    width: 100%;
+    animation: 1400ms mov_content;
+    position: relative;
+}
+@keyframes mov_content{
+    from{
+        opacity: 0;
+        left: 100px;
+    }
+    to{
+        opacity: 1;
+        left: 0px;
+    }
+}

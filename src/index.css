@@ -22,7 +22,7 @@ main{
   align-items: center;
 }
 #area_one{
-  margin: 0% 7%;
+  margin: 5% 7% 0% 7%;
   align-content: center;
   display: flex;
   align-items: center;
@@ -30,4 +30,6 @@ main{
 }
 #area_duo{
   margin-top: 10%;
+  display: flex;
+    flex-direction: column;
 }

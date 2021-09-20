@@ -6,7 +6,7 @@ function Slider(props) {
     return (
         <div className="sliderMainConfig">
             <div className="imgA-1">
-                <img src={props.sliderIMG} alt="" />
+                <img src={props.sliderIMG} className={props.animation} alt="" />
             </div>
         </div>
     )
