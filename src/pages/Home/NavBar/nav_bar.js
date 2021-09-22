@@ -19,8 +19,7 @@ function NavBar() {
     {
       link:"#",
       name:"Categories"
-    },
-    
+    },  
   ];
   return (
     <>

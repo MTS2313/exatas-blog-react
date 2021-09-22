@@ -33,3 +33,10 @@ main{
   display: flex;
     flex-direction: column;
 }
+#area_three{
+  max-height: 100vh;
+  overflow: hidden;
+  width: 99vw;
+  display: flex;
+  position: relative;
+}

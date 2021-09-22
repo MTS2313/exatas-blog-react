@@ -4,29 +4,40 @@ import InfoSlider from "./InfoSlider";
 import Slider from "./Slider";
 import "./Styles/index.css";
 
+import mainA_1Data from "../../data/home/MainSliderA1.js"
+
+
 function MainPage() {
   let [indexSlider, setindexSlider] = useState(0);
   var [animation, setAnimation] = useState(null);
-  const mainA_1Data = [
-    {
-      imagem: "./img/SA1_1.jpg",
-      title: "lorem 1",
-      desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit nullam, curabitur porta venenatis nec a lacinia. Mi class efficitur scelerisque quisque conubia per sapien luctus nam, tellus imperdiet feugiat pellentesque dictumst fusce enim faucibus sit, ullamcorper viverra tempor dui morbi tristique donec volutpat. Vel molestie sapien per dis vivamus neque morbi cursus nibh ad maecenas, facilisi pulvinar feugiat turpis venenatis gravida risus odio magnis in, mattis parturient netus donec metus suspendisse fusce magna dignissim nisi. Finibus leo augue feugiat efficitur turpis congue dictum nostra purus diam, dictumst gravida ligula orci volutpat condimentum at eros dignissim, arcu class sed elementum netus commodo viverra quisque eleifend",
-    },
-    {
-      imagem: "./img/SA1_2.jpg",
-      title: "lorem 2",
-      desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit nullam, curabitur porta venenatis nec a lacinia. Mi class efficitur scelerisque quisque conubia per sapien luctus nam, tellus imperdiet feugiat pellentesque dictumst fusce enim faucibus sit, ullamcorper viverra tempor dui morbi tristique donec volutpat. Vel molestie sapien per dis vivamus neque morbi cursus nibh ad maecenas, facilisi pulvinar feugiat turpis venenatis gravida risus odio magnis in, mattis parturient netus donec metus suspendisse fusce magna dignissim nisi. Finibus leo augue feugiat efficitur turpis congue dictum nostra purus diam, dictumst gravida ligula orci volutpat condimentum at eros dignissim, arcu class sed elementum netus commodo viverra quisque eleifend",
-    },
-    {
-      imagem: "./img/SA1_3.jpg",
-      title: "lorem 3",
-      desc: "Lorem ipsum dolor sit amet consectetur adipiscing elit nullam, curabitur porta venenatis nec a lacinia. Mi class efficitur scelerisque quisque conubia per sapien luctus nam, tellus imperdiet feugiat pellentesque dictumst fusce enim faucibus sit, ullamcorper viverra tempor dui morbi tristique donec volutpat. Vel molestie sapien per dis vivamus neque morbi cursus nibh ad maecenas, facilisi pulvinar feugiat turpis venenatis gravida risus odio magnis in, mattis parturient netus donec metus suspendisse fusce magna dignissim nisi. Finibus leo augue feugiat efficitur turpis congue dictum nostra purus diam, dictumst gravida ligula orci volutpat condimentum at eros dignissim, arcu class sed elementum netus commodo viverra quisque eleifend",
-    },
-  ];
-  function btn_On_off(on, off) {
-    if (on) {
-      document.getElementById("btn").disabled = false;
+  // ------------------------------------
+  function slideBtnDisable(condition){
+    const btns = document.querySelectorAll(".buttons_slider_content button");
+    switch(condition){
+      case "yes":
+        btns.forEach(btn => {
+          btn.disabled = true;
+        });
+      break;
+      case "no":
+        btns.forEach(btn => {
+          btn.disabled = false;
+        });
+        break;
+    }
+  }
+  // ------------------------------------
+  function setAnimationSlide(index){
+    if (indexSlider == index) {
+      return;
+    } else {
+      slideBtnDisable("yes");
+      setAnimation((animation = "control_animation"));
+      setindexSlider((indexSlider = index));
+      setTimeout(() => setAnimation(()=>{
+        slideBtnDisable("no");
+        animation = null;
+      }), 1000);
     }
   }
   return (
@@ -46,44 +57,19 @@ function MainPage() {
         <div className="buttons_slider_content">
           <button
             id="btn"
-            onClick={() => {
-              if (indexSlider == 0) {
-                return;
-              } else {
-                setAnimation((animation = "control_animation"));
-                btn_On_off(true);
-                setindexSlider((indexSlider = 0));
-                setTimeout(() => setAnimation((animation = null)), 2000);
-              }
-            }}
+            onClick={() => setAnimationSlide(0)}
           >
             01
           </button>
           <button
             id="btn"
-            onClick={() => {
-              if (indexSlider == 1) {
-                return;
-              } else {
-                setAnimation((animation = "control_animation"));
-                setindexSlider((indexSlider = 1));
-                setTimeout(() => setAnimation((animation = null)), 2000);
-              }
-            }}
+            onClick={() => setAnimationSlide(1)}
           >
             02
           </button>
           <button
             id="btn"
-            onClick={() => {
-              if (indexSlider == 2) {
-                return;
-              } else {
-                setAnimation((animation = "control_animation"));
-                setindexSlider((indexSlider = 2));
-                setTimeout(() => setAnimation((animation = null)), 2000);
-              }
-            }}
+            onClick={() => setAnimationSlide(2)}
           >
             03
           </button>
