@@ -1,0 +1,17 @@
+.code_checkead_section{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(326.17deg, rgba(0, 0, 0, 0.1) 40.03%, rgba(0, 0, 0, 0) 83.86%);
+}
+.content_code_checkead{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text_code_checkead{
+    text-align: center;
+    margin-bottom: 30px;
+}

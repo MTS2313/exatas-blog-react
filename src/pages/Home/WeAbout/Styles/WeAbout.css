@@ -1,0 +1,45 @@
+.about_style{
+    height: 100vh;
+    width: 99vw;
+}
+.about_style .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 5% 0% 5%;
+}
+.svg_content svg{
+    height: 80px;
+    width: 80px;
+}
+.linha_about{
+    height: 1px;
+    background-color: black;
+    width: 150px;
+}
+.about_style .content h2{
+    font-family: Pathway Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+.about_style .content h3{
+    font-family: Pathway Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+.about_style .content p{
+    font-family: Pathway Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}

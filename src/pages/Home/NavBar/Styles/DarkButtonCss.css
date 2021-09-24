@@ -12,11 +12,15 @@
     cursor: pointer;
 
 }
+.ButtonDark a{
+}
 .ButtonDark h2{
+    color: #ffffff;
     margin: 6px 0px;
     font-family: Pathway Gothic One, sans-serif;
     font-weight: 600;
     font-size: 15px;
+    text-decoration: none;
 }
 .ButtonDark:active{
     background-color: #000000;

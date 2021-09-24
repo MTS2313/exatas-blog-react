@@ -9,7 +9,7 @@ import "./Styles/NavBarCss.css";
 function NavBar() {
   const BarData = [
     {
-      link: "#",
+      link: "/",
       name: "Home",
     },
     {
@@ -20,6 +20,22 @@ function NavBar() {
       link:"#",
       name:"Categories"
     },  
+    {
+      link:"#",
+      name:"Search"
+    },  
+    {
+      link:"#",
+      name:"About-us"
+    },  
+    {
+      link:"#",
+      name:"Help"
+    },  
+    {
+      link:"/login",
+      name:"Login"
+    },  
   ];
   return (
     <>
@@ -28,7 +44,7 @@ function NavBar() {
         {BarData.map((i) => (
           <LinksBar link={i.link} name={i.name} />
         ))}
-        <DarkButton button_text="Create Account" />
+        <DarkButton styleButtonDark="ButtonDark" button_text="Create Account" />
       </div>
     </>
   );

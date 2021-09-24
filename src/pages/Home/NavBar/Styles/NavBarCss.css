@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
 }
-.nav_links_content a {
+.nav_links_content .aClassNav{
   margin: 0px 20px;
   text-decoration: none;
   font-size: 16px;
@@ -11,11 +11,11 @@
   color: #000000;
   transition: top 1000ms;
 }
-.nav_links_content a h3{
+.nav_links_content .aClassNav h3{
   font-style: normal;
   font-weight: normal;
 }
-.nav_links_content a:hover{
+.nav_links_content .aClassNav:hover{
   position: relative;
   top: 0px;
   padding: 0;

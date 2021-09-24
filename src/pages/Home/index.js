@@ -3,7 +3,9 @@ import React from 'react'
 import NavBar from './NavBar/nav_bar';
 import MainPage from './MainPage';
 import MiddleMain from './MiddleMainPage/middleMainPage';
-import EndPageOne from './EndPagaOne';
+import EndPageAreaOne from './EndPagaOne';
+import WeAbout from './WeAbout';
+
 
 
 function Home() {
@@ -19,7 +21,10 @@ function Home() {
         <MiddleMain/>
         </section>
         <section id="area_three">
-        <EndPageOne/>
+        <EndPageAreaOne/>
+        </section>
+        <section className="about_style">
+        <WeAbout/>
         </section>
         </>
     )
