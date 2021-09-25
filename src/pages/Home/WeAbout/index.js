@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBeer,IoLogoFacebook } from 'react-icons/io5';
+import { FaBeer,IoLogoFacebook,IoLogoInstagram,IoLogoTwitter,IoLogoReddit,IoLogoGithub } from 'react-icons/io5';
 
 import "./Styles/WeAbout.css";
 
@@ -40,10 +40,10 @@ function WeAbout() {
         <span>
             <h3>SOCIAL</h3>
             <button className="social_btn_icons"><IoLogoFacebook size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoFacebook size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoFacebook size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoFacebook size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoFacebook size="2em"/></button>
+            <button className="social_btn_icons"><IoLogoInstagram size="2em"/></button>
+            <button className="social_btn_icons"><IoLogoTwitter size="2em"/></button>
+            <button className="social_btn_icons"><IoLogoReddit size="2em"/></button>
+            <button className="social_btn_icons"><IoLogoGithub size="2em"/></button>
             
         </span>
       </div>

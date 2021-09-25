@@ -11,6 +11,7 @@ function DarkButton(props) {
           className={props.styleButtonDark}
         >
           <h2>{props.button_text}</h2>
+          <span>{props.svg}</span>
         </button>
       </a>
     </>

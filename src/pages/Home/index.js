@@ -5,6 +5,8 @@ import MainPage from './MainPage';
 import MiddleMain from './MiddleMainPage/middleMainPage';
 import EndPageAreaOne from './EndPagaOne';
 import WeAbout from './WeAbout';
+import AccBlog from './AccessBlog';
+import "./AccessBlog/Styles/AccBlog.css"
 
 
 
@@ -25,6 +27,9 @@ function Home() {
         </section>
         <section className="about_style">
         <WeAbout/>
+        </section>
+        <section className="acc_blog_sect">
+            <AccBlog/>
         </section>
         </>
     )
