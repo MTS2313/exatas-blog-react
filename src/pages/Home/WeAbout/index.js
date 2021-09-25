@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBeer,IoLogoFacebook,IoLogoInstagram,IoLogoTwitter,IoLogoReddit,IoLogoGithub } from 'react-icons/io5';
+import { IoLogoFacebook,IoLogoInstagram,IoLogoTwitter,IoLogoReddit,IoLogoGithub } from 'react-icons/io5';
 
 import "./Styles/WeAbout.css";
 

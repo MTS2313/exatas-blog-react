@@ -7,6 +7,8 @@ import EndPageAreaOne from './EndPagaOne';
 import WeAbout from './WeAbout';
 import AccBlog from './AccessBlog';
 import "./AccessBlog/Styles/AccBlog.css"
+import BarEnd from '../GlobalComponets/EndBar';
+
 
 
 
@@ -30,6 +32,9 @@ function Home() {
         </section>
         <section className="acc_blog_sect">
             <AccBlog/>
+        </section>
+        <section className="page_rodape">
+        <BarEnd/>
         </section>
         </>
     )

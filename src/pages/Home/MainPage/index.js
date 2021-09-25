@@ -56,19 +56,19 @@ function MainPage() {
       <div className="selector_slider_content">
         <div className="buttons_slider_content">
           <button
-            id="btn"
+            id="btn" className="color_option_slider"
             onClick={() => setAnimationSlide(0)}
           >
             01
           </button>
-          <button
-            id="btn"
+          <button 
+            id="btn" className="color_option_slider"
             onClick={() => setAnimationSlide(1)}
           >
             02
           </button>
           <button
-            id="btn"
+            id="btn" className="color_option_slider"
             onClick={() => setAnimationSlide(2)}
           >
             03
