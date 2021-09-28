@@ -2,7 +2,7 @@ const SliderDataEndPage = [
     {
         SliderImagem:"./img/onebackslider.png",
         title:"batista",
-        text:"a terra e plana",
+        text:"a terra e plana por isso ela se chama planeta",
         author:"Mateus",
     },
     {

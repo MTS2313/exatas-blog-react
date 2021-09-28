@@ -1,6 +1,8 @@
 .about_style{
-    height: 100vh;
+    min-height: 100vh;
     width: 99vw;
+    margin-top: 20%;
+    
 }
 .about_style .content{
     display: flex;
@@ -48,8 +50,13 @@
     margin: 0px 5px;
     background-color: transparent;
     border-style: none;
+    color: #000000;
+    cursor: pointer;
 }
 .about_style .content span{
     text-align: center;
     margin-top: 70px;
+}
+.infoWeAbout_p{
+    -webkit-line-clamp: 10;
 }

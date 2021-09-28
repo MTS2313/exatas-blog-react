@@ -1,0 +1,118 @@
+html,body{
+    width: 100%;height: 100%;
+}
+body{
+    background: linear-gradient(-45deg, #ffffff, #ffffff, #ffffff, rgb(161, 161, 161));
+    background-size: 700% 800%;
+    animation: gradient 8s ease infinite;
+    background-repeat: no-repeat;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.back_sec_BlogSearch{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back_sec_BlogSearch .content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back_sec_BlogSearch .content .text_BlogSearch{
+        display: flex;
+        color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10%;
+    
+}
+.back_sec_BlogSearch .content .text_BlogSearch h2{
+    font-family: Pathway Gothic One;
+font-style: normal;
+font-weight: normal;
+font-size: 72px;
+line-height: 83px;
+/* identical to box height */
+
+text-transform: uppercase;
+}
+.back_sec_BlogSearch .content .text_BlogSearch p{
+    font-family: Pathway Gothic One;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 23px;
+text-align: center;
+
+color: rgba(255, 255, 255, 0.7);
+
+}
+.back_sec_BlogSearch .content .input_BlogSearch{
+    background: rgba(255, 255, 255, 0.8);
+    width: 60%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+.back_sec_BlogSearch .content .input_BlogSearch input{
+    border-bottom: 2px solid #000000;
+    background-color: transparent;
+}
+.icon_search_blSr{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+@media (max-width:1223px){
+    .back_sec_BlogSearch .content .text_BlogSearch{
+        margin: 0;
+    }
+    .back_sec_BlogSearch .content .text_BlogSearch h2{
+        font-size: 22px;
+        margin: 0;
+        height: 40%;
+    }
+    .back_sec_BlogSearch .content .text_BlogSearch p{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        font-size: 15px;
+        margin: 0;
+    }
+    .back_sec_BlogSearch{
+        margin-top: 60px;
+        width: unset;
+        height: unset;
+    }
+    .back_sec_BlogSearch .content .input_BlogSearch{
+        margin-top: unset;
+        width: unset;
+        height: 6%;
+        
+    }
+}
+@media (min-width:425px){
+    .back_sec_BlogSearch{
+        height: 100vh;
+    }
+}

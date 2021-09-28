@@ -57,8 +57,13 @@
 }
 .p_animation{
     transition: 2s all;
+    
 }
 .info_controlls{
     display: flex;
     flex-direction: column;
+    margin-right: 30px;
+}
+.info_controlls p {
+    -webkit-line-clamp: 10;
 }

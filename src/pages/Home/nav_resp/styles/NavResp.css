@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap");
+.line_one {
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+}
+.line_duo {
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+}
+.line_three {
+  width: 30px;
+  height: 3px;
+  background-color: #000000;
+}
+.line_all {
+  margin: 3px 0px;
+  position: relative;
+  left: 0;
+}
+.input_res {
+  display: none;
+}
+.content_resp {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.content_resp label {
+}
+.router_name {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;    
+    margin-left: 20px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+.resp_control{
+    display: flex;
+    justify-content: space-between;
+    margin: 0% 7%;
+  }
+  .links_content{
+    background-color: #ffffff;
+    width: 90vw;
+    height: 93vh;
+    color: #000000;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    display: none;
+    box-shadow: rgb(0, 0, 0, 30%) 103px 0px;
+  }
+  .links_config{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16%;
+}
+.nav_resp_links{
+  color: #000000;
+  font-size: 14px;
+}

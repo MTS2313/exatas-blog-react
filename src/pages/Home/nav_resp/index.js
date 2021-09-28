@@ -1,13 +1,43 @@
 import React from "react";
-import { IoLogoFacebook,IoLogoInstagram,IoLogoTwitter,IoLogoReddit,IoLogoGithub } from 'react-icons/io5';
+import DarkButton from "../NavBar/DarkButton";
+import "./styles/NavResp.css";
+import NavBarData from "../../data/home/NavBarData";
+import LinksBar from "../NavBar/links_bar";
 
-import "./Styles/WeAbout.css";
-
-function WeAbout() {
-  return (
-    <>
-      <div className="content">
-        <span className="svg_content">
+function NavResp(props) {
+    var btnState = false
+    function openNav(){
+        if(btnState != true){
+          console.log(btnState)
+          document.getElementById("resp_links_id").style.display = "block"
+          document.getElementById("overControl").style.overflow = "hidden"
+          btnState = true
+        }else{
+          console.log(btnState)
+          document.getElementById("resp_links_id").style.display = "none"
+          document.getElementById("overControl").style.overflow = "unset"
+          btnState = false
+        }
+      }
+      return (
+        <>
+        <div className="fixed_bar">
+      <div className="resp_control">
+        <div className="content_resp">
+          <label>
+            <input
+              type="checkbox"
+              className="input_res"
+              onClick={()=> openNav()}/>
+            <div className="line_all line_one"></div>
+            <div className="line_all line_duo"></div>
+            <div className="line_all line_three"></div>
+          </label>
+          <div className="router_name">
+            <h2>{props.router}</h2>
+          </div>
+        </div>
+        <div className="logo_resp">
           <svg
             width="39"
             height="39"
@@ -32,23 +62,18 @@ function WeAbout() {
               fill="white"
             />
           </svg>
-        </span>
-        <h2>about-us</h2>
-        <div className="linha_about"></div>
-        <h3>We are Exatas</h3>
-        <p className="infoWeAbout_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis tempus turpis. Praesent et finibus elit, nec tincidunt risus. Praesent ultrices ullamcorper commodo. Pellentesque quis enim egestas, accumsan lacus vitae, aliquam tortor. Integer semper ultricies magna, in fermentum mi semper quis. Ut ornare vestibulum lorem nec iaculis. Phasellus sed est sit amet diam dapibus sodales. In a placerat lorem, fermentum volutpat risus. In in placerat urna. Pellentesque at mollis quam</p>
-        <span>
-            <h3>SOCIAL</h3>
-            <button className="social_btn_icons"><IoLogoFacebook size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoInstagram size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoTwitter size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoReddit size="2em"/></button>
-            <button className="social_btn_icons"><IoLogoGithub size="2em"/></button>
-            
-        </span>
+        </div>
       </div>
+      </div>
+        <div className="links_content"  id="resp_links_id">
+            <div className="links_config">
+            {NavBarData.map((i) => (
+          <LinksBar link={i.link} name={i.name} style_links_class_name="nav_resp_links"/>
+        ))}
+            </div>
+        </div>
     </>
   );
 }
 
-export default WeAbout;
+export default NavResp;

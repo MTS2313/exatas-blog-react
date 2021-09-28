@@ -1,6 +1,6 @@
 .acc_blog_sect {
   width: 99vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0000000d;
 }
 .accblog_content {
@@ -66,4 +66,45 @@
 }
 .control_btndark_span{
     width: 140px;
+}
+#respmenubar{
+  display: none;
+}
+#area_duo_resp{
+  display: none;
+  margin: 50px 40px 0px 40px ;
+}
+#area_three_resp{
+  display: none;
+}
+@media (max-width:1024px){
+    #menubar{
+      display: none;
+    }
+    #area_duo{
+      display: none;
+    }
+    #area_duo_resp{
+      display: block;
+    }
+    #area_three{
+      display: none;
+    }
+    #respmenubar{
+      display: block;
+      position: fixed;
+      width: 100%;
+      background-color: #ffffff;
+      z-index: 1;
+      padding-top: 10px;
+    }
+    #area_three_resp{
+      display: block;
+    }
+    .accblog_content{
+      display: block;
+    }
+    .info_accBlog h3{
+      font-size: 60px;
+    }
 }

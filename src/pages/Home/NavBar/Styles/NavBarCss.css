@@ -21,3 +21,6 @@
   padding: 0;
   text-decoration: underline;
 }
+.content_display_resp{
+  display: none;
+}

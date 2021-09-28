@@ -1,5 +1,5 @@
 .page_rodape {
-  height: 50vh;
+  min-height: 50vh;
   background-color: #000000;
 }
 .page_rodape .content {
@@ -140,4 +140,17 @@ color: rgba(0, 0, 0, 0.7);
 .part4 button{
     background-color: #2D2D2D;
     border-style: none;
+}
+@media (max-width:1024px){
+    .page_rodape{
+      min-height: 100vh;
+      
+    }
+    .page_rodape .content {
+      flex-direction: column;
+      height: 100%;
+    }
+    .partControllAll{
+      width: 100%;
+    }
 }

@@ -1,0 +1,16 @@
+#BlogSearch_sec{
+    width: 100vw;
+    height: 100vh;
+}
+#Posts_sec{
+    display: flex;
+    margin: 0% 10%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+
+
+
+
