@@ -4,13 +4,24 @@
 }
 #Posts_sec{
     display: flex;
-    margin: 0% 10%;
+    margin: 5% 10%;
     flex-direction: column;
     overflow: hidden;
 }
-
-
-
-
-
-
+#post_all_sec{
+    display: flex;
+    margin: 5% 10%;
+    flex-direction: column;
+    overflow: hidden;
+}
+@media (max-width:425px)  and (min-width:320px){
+    #Posts_sec{
+        margin: 0;
+    }
+    #BlogSearch_sec{
+        height: 50vh;
+    }
+    #post_all_sec{
+        margin: 0;
+    }
+}

@@ -1,0 +1,113 @@
+.slider_img_post {
+  width: 100%;
+  height: 100%;
+  transition: 1.5s all ease-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.slider_post_content_all {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.it1 {
+    min-width: 100vw;
+    background-color: #000000;
+}
+.it2 {
+  background-color: yellow;
+  min-width: 100vw;
+}
+.it3 {
+  background-color: aquamarine;
+  min-width: 100vw;
+}
+.box_post_inter {
+  background-color: #ffffff;
+  position: absolute;
+  width: 70px;
+  height: 25%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.select_content_post_option {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.linha_post_option_view_item {
+  border-bottom: 2px solid black;
+  width: 30%;
+}
+.btn_select_slider_option {
+  background-color: transparent;
+  border-style: none;
+  color: #000000;
+}
+.btn_select_slider_option:enabled {
+  border-bottom: 2px solid #000000;
+}
+.like_content_post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.btn_control_for_like{
+    background-color: transparent;
+    border-style:none;
+    cursor: pointer;
+    color: #000000;
+}
+.btn_bar_post_react_text {
+    margin: auto;
+}
+.comment_content_post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+.comment_text_post{
+    font-size: 10px;
+    margin: 0;
+}
+.btn_bar_post_react_icon {
+  height: 30px;
+  width: 30px;
+  color: #000000;
+  left: 0;
+}
+.comment_icon{
+    width: 30px;height: 30px;
+    color: #000000;
+}
+.share_content_post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+.share_icon_content{
+    width: 30px;
+    height: 30px;
+}
+.share_text_post{
+    margin: 0;
+    font-size: 10px
+}
+.btn_comment_post{
+    background-color: transparent;
+    border-style:none;
+    color: #000000;
+    cursor: pointer;
+}
+.btn_share_post{
+    background-color: transparent;
+    border-style:none;
+    color:#000000;
+}

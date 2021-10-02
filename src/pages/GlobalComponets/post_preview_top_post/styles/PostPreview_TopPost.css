@@ -1,0 +1,109 @@
+.post_for_all_content {
+  width: 25%;
+  height: 500px;
+  box-shadow: #00000085 5px 5px 10px;
+  margin: 20px;
+  flex: 2 3 300px;
+  background-color: #ffffff;
+  position: relative;
+}
+.post_for_all_imagem {
+}
+.post_for_all_imagem img {
+  height: 50%;
+  width: 100%;
+}
+.post__for_all_info {
+}
+.post__for_all_info h6,
+h1,
+h4 {
+  padding: 0px 10px;
+  margin: 0;
+}
+
+.tag_all_ul{
+  display: inline-flex;
+  font-family: Pathway Gothic One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+  list-style: disc;
+  margin-block: 0;
+  padding-inline-start: 25px;
+  width: 90%;
+  overflow: hidden
+}
+.tag_all_ul li{
+  margin: 0px 20px 0px 0px;
+}
+.post__for_all_info h1 {
+  font-family: Pathway Gothic One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.post__for_all_info h4 {
+  margin: 5px 0px;
+  font-family: Pathway Gothic One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.7);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.post_for_all_link {
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+}
+.post_for_all_link a {
+  text-decoration: underline;
+}
+.post_for_all_link a button {
+  display: flex;
+  background-color: transparent;
+  border-style: none;
+  align-items: center;
+  position: relative;
+  color: #000000;
+}
+.post_for_all_link a button h3 {
+  text-decoration: underline;
+}
+@media (min-width: 765px) and (max-width: 1024px) {
+  .post_for_all_content {
+    flex: 1 2 270px;
+  }
+}
+.tag_content {
+  margin: 0px 10px;
+  list-style-type: disc;
+}
+.p_tag_class{
+  width: max-content;
+}
+.post_link_button{
+  cursor: pointer;
+}
+@media (max-width:425px) and (min-width:320px){
+  .post_for_all_content{
+    margin: 0;
+    width: 100%;
+    box-shadow: unset;
+  }
+}

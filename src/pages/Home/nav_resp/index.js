@@ -1,5 +1,4 @@
 import React from "react";
-import DarkButton from "../NavBar/DarkButton";
 import "./styles/NavResp.css";
 import NavBarData from "../../data/home/NavBarData";
 import LinksBar from "../NavBar/links_bar";
@@ -7,7 +6,7 @@ import LinksBar from "../NavBar/links_bar";
 function NavResp(props) {
     var btnState = false
     function openNav(){
-        if(btnState != true){
+        if(btnState !== true){
           console.log(btnState)
           document.getElementById("resp_links_id").style.display = "block"
           document.getElementById("overControl").style.overflow = "hidden"

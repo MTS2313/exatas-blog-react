@@ -16,7 +16,7 @@ function BarEnd() {
       <div className="content">
         <div className="part1 partControllAll">
           <span className="btn_logo_endbar">
-            <a href="#">
+            <a href="/">
               <button>
                 <svg
                   width="39"
@@ -109,12 +109,12 @@ function BarEnd() {
         <div className="part3 partControllAll">
           <h1>Navigation</h1>
           <ul className="nav_endbar">
-          <a href=""><li>Home</li></a>
-          <a href=""><li>Blog</li></a>
-          <a href=""><li>About-us</li></a>
-          <a href=""><li>Help</li></a>
-          <a href=""><li>Login</li></a>
-          <a href=""><li>Create Occount</li></a>
+          <a className="link_a_endBar" href=""><li className="li_navEndBar">Home</li></a>
+          <a className="link_a_endBar" href=""><li className="li_navEndBar">Blog</li></a>
+          <a className="link_a_endBar" href=""><li className="li_navEndBar">About-us</li></a>
+          <a className="link_a_endBar" href=""><li className="li_navEndBar">Help</li></a>
+          <a className="link_a_endBar" href=""><li className="li_navEndBar">Login</li></a>
+          <a className="link_a_endBar" href=""><li className="li_navEndBar">Create Occount</li></a>
           </ul>
         </div>
         <div className="part4 partControllAll">

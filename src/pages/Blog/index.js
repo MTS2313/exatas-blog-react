@@ -2,9 +2,12 @@ import React from "react";
 import BarEnd from "../GlobalComponets/EndBar";
 import NavBar from "../Home/NavBar/nav_bar";
 import NavResp from "../Home/nav_resp";
+import BlogMsgad from "./BlogMsgad";
 import BlogSearch from "./BlogSearch";
 import "./index.css"
-import TopNews from "./TopNews";
+import UserSelectPosts from "./MemberPost";
+import UserSelectTopPosts from "./TopPost";
+import AllPostsContent from "./AllPosts";
 
 function index() {
   return (
@@ -19,11 +22,13 @@ function index() {
         <BlogSearch/>
       </section>
       <section id="Posts_sec">
-        <TopNews/>
+        <UserSelectPosts/>
+        <UserSelectTopPosts/>
       </section>
-
-
-
+      <BlogMsgad/>
+      <section id="post_all_sec">
+      <AllPostsContent/>
+      </section>
       <section className="page_rodape">
         <BarEnd />
       </section>

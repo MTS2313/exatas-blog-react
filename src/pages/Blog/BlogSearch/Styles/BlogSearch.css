@@ -111,8 +111,11 @@ color: rgba(255, 255, 255, 0.7);
         
     }
 }
-@media (min-width:425px){
+@media (min-width:425px) and (max-width:1024px){
     .back_sec_BlogSearch{
-        height: 100vh;
+        height: 65vh;
+    }
+    .back_sec_BlogSearch .content .input_BlogSearch{
+        height: 11%;
     }
 }

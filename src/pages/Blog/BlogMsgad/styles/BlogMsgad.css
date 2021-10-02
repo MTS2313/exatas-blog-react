@@ -1,0 +1,111 @@
+.img_content_postBlog_center{
+    width: 100vw;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background: center;
+    background-size:cover ;    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+.post_msg_ad_content{
+    background-color: #ffffff63;
+    height: 80%;
+    width: 30%;
+    margin: 0px 80px 0px 0px;
+    padding: 20px;
+}
+.sup_title_blogmsg{
+    font-family: Pathway Gothic One;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 28px;
+
+margin: 0;
+color: rgba(28, 28, 28, 0.5);
+
+}
+.title_blogmsg{
+    font-family: Pathway Gothic One;
+font-style: normal;
+font-weight: normal;
+font-size: 40px;
+line-height: 46px;
+margin: 0;
+padding: 0;
+color: #000000;
+}
+.allTag_blog_msg{
+    font-family: Pathway Gothic One;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 18px;
+margin: 0px 10px auto;
+color: rgba(28, 28, 28, 0.5);
+min-inline-size: max-content;
+
+}
+.blogmsg_desc{
+    font-family: Pathway Gothic One;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 24px;
+/* or 100% */
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 4;
+overflow: hidden;
+
+
+color: rgba(0, 0, 0, 0.8);
+
+}
+.tag_blogmsg{
+    display: flex;
+    padding-inline: 0;
+    margin-block: 0;
+    margin-inline: 0;
+    overflow: hidden;
+    width: 90%;
+}
+.button_link_content_blog_msg{
+position: absolute;
+bottom: 25px;
+right: 90px;
+}
+.link_class_{
+    color: #000000;
+}
+.btn_blogmsg{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-style: none;
+    color: #000000;
+}
+@media (max-width:1024px) and (min-width:320px){
+    .post_msg_ad_content{
+        width: 100%;
+        height: 105%;
+        padding: 0;
+        margin: 0;
+        
+    }
+    .spans_blogmsg{
+        padding: 0;
+        margin: 0px 10px;
+        margin-top: 10px;
+    }
+    .button_link_content_blog_msg{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .blogmsg_desc{
+        -webkit-line-clamp: 3;
+        font-size: 20px;
+    }
+}

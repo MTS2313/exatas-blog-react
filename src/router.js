@@ -7,6 +7,7 @@ import CodeCheckead from "./pages/LoginForgot/CodeCheckead";
 import LoginForgot from "./pages/LoginForgot/EmailS";
 import ResertPassw from "./pages/LoginForgot/ResertPassw";
 import Blog from "./pages/Blog"
+import Post from "./pages/Post";
 
 
 
@@ -20,6 +21,7 @@ function Routes(){
             <Route path="/forgot_code" component={CodeCheckead}/>
             <Route path="/resert-pass" component={ResertPassw}/>
             <Route path="/blog" component={Blog}/>
+            <Route exact path="/post" component={Post}/>
         </Switch>
         </BrowserRouter>
     );
