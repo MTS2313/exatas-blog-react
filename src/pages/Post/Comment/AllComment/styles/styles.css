@@ -1,0 +1,29 @@
+.comment_bar_close_and_title{
+    display: flex;
+    justify-content: flex-end;
+}
+.title_comment_bar{
+    position: relative;
+    width: 300px;
+    right: 50%;
+    transform: translate(80%, 0%);
+}
+.close_btn_content{
+    
+}
+.comment_list_content{
+    max-height: 75%;
+    margin: 3% 5%;
+    overflow-y: scroll;
+}
+.comment_list{
+    
+}
+.display_flex_content{
+    display: flex;
+}
+.img_comment{
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+}

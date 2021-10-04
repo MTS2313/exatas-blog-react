@@ -11,7 +11,7 @@ function Modal(props) {
     <>
       <div className="modal_content_external">
         <div className="modal_content_intern">
-          <PrimaryComment/>
+          <PrimaryComment modalCLose={props.modalCLose}/>
         </div>
       </div>
     </>

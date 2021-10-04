@@ -1,0 +1,68 @@
+.comment_open_content {
+  margin: 0px 40px;
+  width: calc(100% - 40px * 2);
+  height: 100%;
+}
+.all_comment_primary {
+  display: flex;
+}
+.modal_comment_open_bar_control {
+  display: flex;
+  justify-content: space-between;
+}
+.back_allcomment {
+  background-color: transparent;
+  border-style: none;
+}
+.btn_back_all_comment {
+  width: 30px;
+  height: 30px;
+  color: #000000;
+}
+.secund_comment_content {
+  display: flex;
+  margin: 0px 0px 0px 50px;
+}
+.user_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 10px;
+}
+.comment_content {
+  overflow-y: scroll;
+  height: 500px;
+}
+.comment_content::-webkit-scrollbar {
+  width: 3px;
+}
+.comment_content::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+.comment_content::-webkit-scrollbar-track {
+  background: #00000029;
+}
+.name_user_comment {
+  font-family: Pathway Gothic One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.comment_user {
+  font-family: Pathway Gothic One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: rgba(0, 0, 0, 0.7);
+}

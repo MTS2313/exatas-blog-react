@@ -13,16 +13,16 @@ import Slider from "./SliderFromPostPage/Slider";
 
 import authot_data from "../data/Post/PostAuthotData";
 import BarEnd from "../GlobalComponets/EndBar";
-import Modal from "../GlobalComponets/Modal/modal";
 import PostItemData from "../data/Post/PostTextData";
+import ModalUI from "./Comment/Modal";
 function Post(props) {
   var [modalState, setmodalState] = useState(false)
-  let likes_qnt = 100;
-  let comment_qnt = 40;
-  let share_qnt = 79;
+  function modalControlFunc(){
+    setmodalState(modalState= true)
+  }
   return (
     <>
-    {modalState ? <Modal modalClose={()=>setmodalState(modalState = false)}/> :null}
+    {modalState ? <ModalUI onCloselevalduo={()=>setmodalState(modalState = false)}/> :null}
       <div className="main_to_post_all_content">
         <div className="nav_bar_to_post_back_btn">
           <a className="link_to_post_back_btn" href="/">
@@ -42,20 +42,20 @@ function Post(props) {
           </p>
         </div>
         <div className="slider_content_post">
-          <Slider onClick={()=> setmodalState(modalState = true)}/>
+          <Slider onClick={()=>modalControlFunc()}/>
         </div>
         <div className="post_contet_info">
           <div className="social_media_content_status">
             <span className="media_social_qnt_status">
-              <h4 className="media_social_qnt_status_h5">{likes_qnt} Likes</h4>
+              <h4 className="media_social_qnt_status_h5"> Likes</h4>
             </span>
             <span className="media_social_qnt_status">
               <h4 className="media_social_qnt_status_h5">
-                {comment_qnt} comments
+               comments
               </h4>
             </span>
             <span className="media_social_qnt_status">
-              <h4 className="media_social_qnt_status_h5">{share_qnt} shares</h4>
+              <h4 className="media_social_qnt_status_h5">shares</h4>
             </span>
           </div>
           <div className="author_content_infos">

@@ -2,16 +2,17 @@ import React from 'react'
 import commentery_data from '../../data/Post/PostCommenteryData'
 import { IoIosClose } from "react-icons/io";
 import {MdSend} from "react-icons/md"
+import ".././Modal/modal.css"
 
 function PrimaryComment(props) {
     return (
-        <div>
+        <>
             <div className="start_bar">
         <button className="close_modal_class" onClick={props.modalClose}>
           <IoIosClose className="icon_close_svg" />
         </button>
         <h3 className="title_modal_content">Comments</h3>
-      </div>
+          </div>
             {commentery_data.map((i,index) => (
               <div className="comment_primary_content">
                 <div className="comment_control_style" >
@@ -50,7 +51,7 @@ function PrimaryComment(props) {
                 </div>
               </div>
             ))}
-        </div>
+        </>
     )
 }
 
