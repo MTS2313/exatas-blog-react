@@ -7,6 +7,7 @@ function DarkButton(props) {
     <>
       <a href={props.darkbuttonlink}>
         <button
+        form={props.form}
           onClick={props.DarkButtonActiveClick}
           className={props.styleButtonDark}
         >

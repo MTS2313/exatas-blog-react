@@ -14,7 +14,7 @@ function NavBar() {
         {BarData.map((i) => (
           <LinksBar link={i.link} name={i.name} style_links_class_name="aClassNav"/>
         ))}
-        <DarkButton styleButtonDark="ButtonDark" button_text="Create Account" />
+        <DarkButton darkbuttonlink="/register" styleButtonDark="ButtonDark" button_text="Create Account" />
       </div>
     </>
   );

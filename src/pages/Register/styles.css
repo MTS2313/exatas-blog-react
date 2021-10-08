@@ -1,0 +1,24 @@
+.register_all_div_content{
+    width: 100vw;
+    min-height: 100vh;
+}
+.navbar_from_register{
+    display: flex;
+    justify-content: space-around;
+}
+.btn_next{
+    background-color: #000000;
+    color:#ffffff;
+    border-style: none;
+    font-size: 20px;
+    padding: 0px 10px;
+    margin: 0 40px 50px 0px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 11px #00000059;
+    transition: 1s all;
+}
+.btn_next:hover{
+    box-shadow: none;
+}
