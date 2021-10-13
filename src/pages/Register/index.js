@@ -1,49 +1,67 @@
-import React, { useState } from "react";
-import P1 from "./P01";
-import P2 from "./P02";
-import NavBar from "../Home/NavBar/nav_bar";
+import React,{useState} from "react";
+import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi";
 import "./styles.css";
-import {HiOutlineArrowRight} from "react-icons/hi"
-function Register() {
-  var [Etapa, setEtapa] = useState(<P1 btnform={<button form="formone" className="btn_next" ><h5>Next</h5><HiOutlineArrowRight/></button>}/>);
-  var registerData = [];
-  function armazenar(e) {
-    e.preventDefault();
-    console.log(e.target.stage.value);
-    switch (e.target.stage.value) {
-          case "1":
-            formvalidcheck(e);
-            setEtapa(Etapa = <P2 list={<li>{registerData.email}</li>}/>)
-            return console.log(registerData)
-            break;
-            case 2:
-              
-              break;
-              case 3:
-                break;
-              }
-function formvalidcheck(e){
-      registerData.push = {
-        email: e.target.email.value,
-        fullname: e.target.fullname.value,
-        username: e.target.username.value,
-        password: e.target.password.value,
-        cpassword: e.target.passwordconfirm.value,
-      };
+import NavBar from "./../Home/NavBar/nav_bar";
+import P1 from "./P01/index"
+import P2 from "./P02/index"
+import P3 from "./P03/index"
+function RegisterMain() {
+  var [tapvarcontrol, settapvarcontrol] = useState(1)
+  var[tap, settap] = useState(<P1/>);
+  function control_tap(s) {
+    if(s === "back"){
+      if(tapvarcontrol === 1){
+        return
+      }
+      if (tapvarcontrol === 2) {
+        settap(tap = <P1/>)
+        settapvarcontrol(tapvarcontrol = 1)
+        return
+      }
+      if(tapvarcontrol === 3){
+        settap(tap = <P2/>)
+        settapvarcontrol(tapvarcontrol = 2)
+        return
+      }
+    }
+    if(s === "next"){
+      if(tapvarcontrol === 1){
+        console.log("troca p2");
+        settap(tap = <P2/>)
+        settapvarcontrol(tapvarcontrol = 2)
+        return
+      }
+      if(tapvarcontrol === 2){
+        settap(tap = <P3/>)
+        settapvarcontrol(tapvarcontrol = 3)
+        return
+      }
     }
   }
   return (
-    <>
-      <div className="register_all_div_content">
-        <section className="navbar_from_register">
-          <NavBar />
-        </section>
-        <form id="formone" onSubmit={(e)=>armazenar(e)}>
-          {Etapa}
-        </form>
+    <section className="register_control">
+      <div className="nav_bar_register_control">
+        <NavBar />
       </div>
-    </>
+      {/* tap register */}
+      {tap}
+      {/* tap register */}
+      <div className="btn_tap_controll">
+        <button
+          className="btn_back style_btn_duo_control"
+          onClick={() => control_tap("back")}
+        >
+          <HiOutlineArrowLeft className="icon_back_btn_register" />
+          <h2 className="btn_back_text">Back</h2>
+        </button>
+        <button className="btn_next style_btn_duo_control"
+        onClick={()=> control_tap("next")}>
+          <h2 className="btn_next_next">Next</h2>
+          <HiOutlineArrowRight className="icon_next_btn" />
+        </button>
+      </div>
+    </section>
   );
 }
 
-export default Register;
+export default RegisterMain;

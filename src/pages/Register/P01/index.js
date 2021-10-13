@@ -1,77 +1,52 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./styles/styles.css";
 import { RiKeyLine, RiMailLine, RiUserLine } from "react-icons/ri";
 import DarkButton from "../../Home/NavBar/DarkButton";
+import { emailv, fullnamev, usernamev } from "../script/scriptv";
 function P1(props) {
-var [setbtn, setsetbtn] = useState(null)
-var [stagenumber, setstagenumber] = useState(0);
-var passConf;
-var powerlevel;
-function passw_level (e){
-  var password = e.target.value;
-  powerlevel = 0;
-  if(password !== null){}
-  powerlevel += 10;
-    if((password.length >= 8)&&(password.match(/[a-z]/))&&(password.match(/[A-Z]/))&&(password.match(/[0-9]/))){
-      powerlevel += 20;
-      if((password.length > 10)&&(password.match(/[!@#\/;:$%"'&*()~_-]/))){
-        powerlevel += 30;
+  var [setbtn, setsetbtn] = useState(null);
+  var stagenumber = 1; 
+  var  [checkeadinput,  setcheckeadinput] = useState(0);
+  var emaild;
+  function formvalided (e){
+    if(e.target.name === "email"){
+      if(emailv(e.target.value)){
+        document.getElementById("email_label_id").style.borderColor = "green"
+        console.log("ok");
+      }else{
+        document.getElementById("email_label_id").style.borderColor = "red"
       }
     }
-    if((powerlevel >= 0)&&(powerlevel <= 25)){
-      document.getElementById("passwordid").style.borderColor = "red";
-    }
-    if((powerlevel > 25)&&(powerlevel <= 50)){
-      document.getElementById("passwordid").style.borderColor = "yellow";
-      passConf = password;
-    }
-    if((powerlevel > 50)&&(powerlevel <= 100)){
-      document.getElementById("passwordid").style.borderColor = "green";
-      passConf = password;
-    }
-    console.log(passConf);
-  }
-  var passwordtrue = false;
-  function passExConf (e){
-    var re_passConf = e.target.value;
-    passConf = document.getElementById("inputpassid").value;
-    if(re_passConf === passConf){
-      document.getElementById("confirminputlab").style.borderColor = "green"
-      passwordtrue = true;
-      registerTrue();
-    }
-    if(re_passConf !== passConf){
-      document.getElementById("confirminputlab").style.borderColor = "red"
-      passwordtrue = false;
-    }
-  }
-  var email_true = false;
-  function mailConfirm(e){
-    var email = e.target.value
-    if((email.indexOf(".") >= 1) && (email.indexOf("@") >= 1)&&(email.lastIndexOf(".") < email.length - 1)){
-      if(email.indexOf(" ")==-1){
-        console.log("sa")
-        email_true = true;
+    if (e.target.name === "fullname") {
+      if (fullnamev(e.target.value)) {
+        document.getElementById("input_fullname_id").style.borderColor = "green"
+        console.log("n1")
+      }else{
+        document.getElementById("input_fullname_id").style.borderColor = "red"
       }
     }
-  }
-
-
-  function registerTrue(e){
-    console.log("email ta true? :"+email_true);
-    console.log("senha ta forte? :"+powerlevel);
-    console.log("a senha foi confirmada?:"+passwordtrue);
-    if((email_true === true) && (powerlevel >= 50) && (passwordtrue === true)){
-      setsetbtn(setbtn = props.btnform)
-      setstagenumber(stagenumber = 1)
-      console.log("ta ok")
-    }else{
-      setsetbtn(setbtn = null)
+    if (e.target.name === "username") {
+      if (usernamev(e.target.value)) {
+        document.getElementById("username_input_id").style.borderColor = "green"
+        
+      }else{
+        document.getElementById("username_input_id").style.borderColor = "red"
+        
+      }
+    }
+    if (e.target.name === "password") {
+    }
+    if (e.target.name ===  "confimpassword") {
     }
   }
   return (
     <>
-    <input type="hidden" name="stage" id="input_from_btn_enable" value={stagenumber} />
+      <input
+        type="hidden"
+        name="stage"
+        id="input_from_btn_enable"
+        value={stagenumber}
+      />
       <section className="etapaOne">
         <div className="progress_bar_33">
           <div className="actual_bar_33"></div>
@@ -91,77 +66,74 @@ function passw_level (e){
             <h6 className="et01_sub_title">
               Sign in to get the most out of exatas.
             </h6>
-              <div className="content_input_email content_input_all">
-                <label className="user_email_lb">
-                  <RiMailLine className="icons_register_input" />
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    onKeyUp={(e)=> mailConfirm(e)}
-                    onBlur={()=> registerTrue()}
-                    className="email_input_regiter input_all_register_config"
-                    placeholder="Email"
+            <div className="content_input_email content_input_all">
+              <label className="user_email_lb" id="email_label_id">
+                <RiMailLine className="icons_register_input" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  onChange={(e)=> formvalided(e)}
+                  className="email_input_regiter input_all_register_config"
+                  placeholder="Email"
+                  key="email"
                   />
-                </label>
-              </div>
-              <div className="content_name_complete content_input_all">
-                <label className="user_name_all_label">
-                  <RiUserLine className="icons_register_input" />
-                  <input
-                    type="text"
-                    name="fullname"
-                    id=""
-                    onBlur={()=>registerTrue()}
-                    className="input_complete_name input_all_register_config"
-                    placeholder="Full Name"
-                  />
-                </label>
-              </div>
-              <div className="content_user_name content_input_all">
-                <label className="user_name">
-                  <RiUserLine className="icons_register_input" />
-                  <input
-                    type="text"
-                    name="username"
-                    id=""
-                    onBlur={()=>registerTrue()}
-                    className="user_name_register_input input_all_register_config"
-                    placeholder="Nick Name"
-                  />
-                </label>
-              </div>
-              <div className="content_password content_input_all">
-                <label className="password_one" id="passwordid">
-                  <RiKeyLine className="icons_register_input" />
-                  <input
-                    type=""
-                    onBlur={()=>registerTrue()}
-                    name="password"
-                    id="inputpassid"
-                    className="input_password_register input_all_register_config"
-                    placeholder="Password"
-                    onKeyUp={(e)=>passw_level(e)}
-                  />
-                </label>
-              </div>
-              <div className="content_password_confirm content_input_all">
-                <label className="password_confirm" id="confirminputlab">
-                  <RiKeyLine className="icons_register_input" />
-                  <input
-                    type=""
-                    name="passwordconfirm"
-                    id="confirminput"
-                    onKeyUp={(e)=> passExConf(e)}
-                    className="input_password_confirm_register input_all_register_config"
-                    placeholder="Password Confirm"
-                  />
-                </label>
-              </div>
+              </label>
+            </div>
+            <div className="content_name_complete content_input_all">
+              <label className="user_name_all_label" id="input_fullname_id">
+                <RiUserLine className="icons_register_input" />
+                <input
+                  type="text"
+                  name="fullname"
+                  id="fullname"
+                  onChange={(e)=> formvalided(e)}
+                  className="input_complete_name input_all_register_config"
+                  placeholder="Full Name"
+                />
+              </label>
+            </div>
+            <div className="content_user_name content_input_all">
+              <label className="user_name" id="username_input_id">
+                <RiUserLine className="icons_register_input" />
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  onChange={(e)=> formvalided(e)}
+                  className="user_name_register_input input_all_register_config"
+                  placeholder="Nick Name"
+                />
+              </label>
+            </div>
+            <div className="content_password content_input_all">
+              <label className="password_one" id="passwordid">
+                <RiKeyLine className="icons_register_input" />
+                <input
+                  type=""
+                  name="password"
+                  id="inputpassid"
+                  onChange={(e)=> formvalided(e)}
+                  className="input_password_register input_all_register_config"
+                  placeholder="Password"
+                />
+              </label>
+            </div>
+            <div className="content_password_confirm content_input_all">
+              <label className="password_confirm" id="confirminputlab">
+                <RiKeyLine className="icons_register_input" />
+                <input
+                  type=""
+                  onChange={(e)=> formvalided(e)}
+                  name="passwordconfirm"
+                  id="confirminput"
+                  className="input_password_confirm_register input_all_register_config"
+                  placeholder="Password Confirm"
+                />
+              </label>
+            </div>
           </div>
-          <div className="columthree">
-            {setbtn}
-          </div>
+          <div className="columthree">{props.btnform}</div>
         </div>
       </section>
     </>

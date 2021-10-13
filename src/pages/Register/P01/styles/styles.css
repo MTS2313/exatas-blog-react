@@ -154,3 +154,16 @@
   border: 2px solid #f8f8f8;
   transition:  2s border;
 }
+#email_label_id{
+  border: 2px solid #f8f8f8;
+  transition:  2s border;
+}
+#input_fullname_id{
+  border: 2px solid #f8f8f8;
+  transition:  2s border;
+}
+#username_input_id{
+  border: 2px solid #f8f8f8;
+  transition:  2s border;
+
+}

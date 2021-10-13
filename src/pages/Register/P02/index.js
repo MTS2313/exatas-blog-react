@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function P2(props) {
-    return (
-        <div>
-           <ul>
-               {props.list}
-           </ul>
-        </div>
-    )
+    var stagenumber = 1
+  return (
+    <section className="etapaduo">
+      <h2>P2</h2>
+    </section>
+  );
 }
 
-export default P2
+export default P2;
