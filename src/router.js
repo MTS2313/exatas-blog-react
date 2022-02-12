@@ -11,7 +11,6 @@ import Post from "./pages/Post";
 import RegisterMain from "./pages/Register";
 
 
-
 function Routes(){
     return(
         <BrowserRouter>
@@ -23,7 +22,7 @@ function Routes(){
             <Route path="/resert-pass" component={ResertPassw}/>
             <Route path="/blog" component={Blog}/>
             <Route exact path="/post" component={Post}/>
-            <Route path="/register" component={RegisterMain}/>
+            <Route path="/register" component={RegisterMain} />
         </Switch>
         </BrowserRouter>
     );
