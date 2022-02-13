@@ -1,5 +1,4 @@
 import './style.css'
-import ButtonAll from '../../GlobalComponets/ButtonAll'
 
 const tagData = [
     {
@@ -57,20 +56,20 @@ const Pag2 = ({ updateIndex }) => {
     return (<>
         <section className='section'>
             <div className='select-tag-section'>
-            <div></div>
-            <div>
-            <h1 className='h1-tt'>Now tell us <br /> what do you like most?</h1>
-            <div className='tag-selections'>
-                {tagData.map((tag)=>(<div type="checkbox"  className='tag-model' onClick={(e) => {console.log(e.target.classList.toggle('active'))}}>{tag.name}</div>
-                ))}
-            </div>
-            </div>
-            <div className="button-area">
-                <div className="content">
-                    <button className='back-btn'>Back</button>
-                       <button className='next-btn'>Next</button>
+                <div></div>
+                <div>
+                    <h1 className='h1-tt'>Now tell us <br /> what do you like most?</h1>
+                    <div className='tag-selections'>
+                        {tagData.map((tag) => (<div type="checkbox" className='tag-model' onClick={(e) => { console.log(e.target.classList.toggle('active')) }}>{tag.name}</div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+                <div className="button-area">
+                    <div className="content">
+                        <button className='back-btn'>Back</button>
+                        <button className='next-btn'>Next</button>
+                    </div>
+                </div>
             </div>
         </section>
 

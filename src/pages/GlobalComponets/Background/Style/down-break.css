@@ -1,0 +1,25 @@
+
+
+.background-content{
+    bottom: -7%;
+    right: -35%;
+    position: absolute;
+    background-image: url(../../../../assets/elipse-down-break.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+}
+
+@media (max-width: 1200px) {
+    .background-content{
+        bottom:-10%;
+        right: -35%;
+        position: absolute;
+    }
+    .background-content img{
+        width: 1000px;
+        height: auto;
+    }
+}
