@@ -8,10 +8,10 @@ function Login() {
     return (
         <>
         <section className="section_login">
-        <header id="menubar">
-        <NavBar/>
-        </header>
-        <LoginTapOne/>
+            <header id="menubar">
+                <NavBar/>
+            </header>
+            <LoginTapOne/>
         </section>
         </>
     )
