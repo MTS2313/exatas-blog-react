@@ -4,7 +4,7 @@ import Pag2 from './pag2'
 import Pag3 from './pag3'
 import NavBar from '../Home/NavBar/nav_bar'
 import EndBar from '../GlobalComponets/EndBar'
-import "./Styles/LoginTapOne.css"
+import "./styles/LoginTapOne.css"
 
 class Register extends React.Component{
 
@@ -26,6 +26,8 @@ class Register extends React.Component{
 
         this.updateIndex = this.updateIndex.bind(this);
         this.selectLayout = this.selectLayout.bind(this);
+        this.addTag = this.addTag.bind(this);
+        this.removeTag = this.removeTag.bind(this);
 
     }
 
@@ -40,6 +42,27 @@ class Register extends React.Component{
             return prevState;
         })
     }
+
+    // -------------------> ADD TAG
+    addTag(id){ 
+        this.setState((prevState) => {
+            prevState.form.tags.push(id);
+            return prevState;
+        })
+    }
+
+    // -------------------> REMOVE TAG
+    removeTag(id){
+        this.setState((prevState) => {
+            // remove tag that contains id passed
+            let tags = prevState.form.tags;
+            const newTags = tags.filter((tag) => tag != id);
+            
+            prevState.form.tags = newTags
+
+            return prevState;
+        })
+    }
     
     // -------------------> SELECT LAYOUT 
     selectLayout(){
@@ -47,7 +70,11 @@ class Register extends React.Component{
             case 1:
                 return <Pag1 updateIndex={this.updateIndex} form={this.state.form} />   
             case 2:
-                return <Pag2 updateIndex={this.updateIndex} form={this.state.form} />
+                return <Pag2 
+                    updateIndex={this.updateIndex} 
+                    tags={this.state.form.tags} 
+                    addTag={this.addTag} 
+                    removeTag={this.removeTag} />
             case 3:
                 return <Pag3 updateIndex={this.updateIndex} form={this.state.form} />
         }
@@ -58,10 +85,10 @@ class Register extends React.Component{
 
         return(
         <>
+                <header id="menubar">
+                    <NavBar />
+                </header>
                 <section className="section_login">
-                    <header id="menubar">
-                        <NavBar />
-                    </header>
                     
                     {
                     // ------------> SELECT LAYOUT

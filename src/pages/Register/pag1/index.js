@@ -1,6 +1,8 @@
+import '../styles/register.css'
 import {ReactComponent as UserIcon} from '../../../assets/svg/user.svg'
 import {ReactComponent as PasswordIcon} from '../../../assets/svg/password.svg'
 import {ReactComponent as EmailIcon} from '../../../assets/svg/email.svg'
+
 
 const Pag1 = ({updateIndex,form}) => {
 
@@ -30,7 +32,11 @@ const Pag1 = ({updateIndex,form}) => {
           </label>
 
         </span>
-            <button onClick={() => updateIndex(2)}>next</button>
+        <div className="button-area">
+                <div className="content float-right">
+                       <button className='next-btn' onClick={() => updateIndex(2)}>Next</button>
+                </div>
+            </div>
       </div>
 
         </>

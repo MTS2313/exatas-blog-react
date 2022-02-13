@@ -1,9 +1,9 @@
 .section_login{
-    width: 100vw;
     align-items: center;
     justify-content: center;
     background: linear-gradient(326.17deg, rgba(0, 0, 0, 0.1) 40.03%, rgba(0, 0, 0, 0) 83.86%);
     flex-direction: column;
+    padding: 40px;
 }
 .content_login{
     display: flex;

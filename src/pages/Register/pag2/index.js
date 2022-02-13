@@ -1,5 +1,5 @@
-import './style.css'
-import ButtonAll from '../../GlobalComponets/ButtonAll'
+import '../styles/register.css'
+import { useEffect } from 'react';
 
 const tagData = [
     {
@@ -52,7 +52,23 @@ const tagData = [
     },
 ]
 
-const Pag2 = ({ updateIndex }) => {
+const Pag2 = ({ updateIndex, tags, addTag, removeTag }) => {
+
+    useEffect(() => {
+       console.log(tags)
+    });
+
+
+    function onTagChange(checkbox,id){
+        // toggle class
+        checkbox.classList.toggle('active')
+        
+        const addOrRemove = tags.includes(id);
+
+        // add or remove tag from state
+        if(addOrRemove == true) removeTag(id);
+        else addTag(id);
+    } 
 
     return (<>
         <section className='section'>
@@ -61,14 +77,20 @@ const Pag2 = ({ updateIndex }) => {
             <div>
             <h1 className='h1-tt'>Now tell us <br /> what do you like most?</h1>
             <div className='tag-selections'>
-                {tagData.map((tag)=>(<div type="checkbox"  className='tag-model' onClick={(e) => {console.log(e.target.classList.toggle('active'))}}>{tag.name}</div>
+                {tagData.map((tag)=>(
+                    <div 
+                    type="checkbox"  
+                    className={"tag-model "+ (tags.includes(tag.id) && 'active')} 
+                    onClick={(e) => {onTagChange(e?.target, tag.id)}}>
+                        {tag.name}
+                    </div>
                 ))}
             </div>
             </div>
             <div className="button-area">
                 <div className="content">
-                    <button className='back-btn'>Back</button>
-                       <button className='next-btn'>Next</button>
+                    <button className='back-btn' onClick={() => updateIndex(1)}>Back</button>
+                       <button className='next-btn' onClick={() => updateIndex(3)}>Next</button>
                 </div>
             </div>
             </div>
