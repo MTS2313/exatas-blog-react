@@ -59,9 +59,9 @@ const Pag2 = ({ updateIndex }) => {
             <div className='select-tag-section'>
             <div></div>
             <div>
-            <h1 className='h1-tt'>Now tell us, what do you like most?</h1>
+            <h1 className='h1-tt'>Now tell us <br /> what do you like most?</h1>
             <div className='tag-selections'>
-                {tagData.map((tag)=>(<div type="checkbox"  className='tag-model'>{tag.name}</div>
+                {tagData.map((tag)=>(<div type="checkbox"  className='tag-model' onClick={(e) => {console.log(e.target.classList.toggle('active'))}}>{tag.name}</div>
                 ))}
             </div>
             </div>
