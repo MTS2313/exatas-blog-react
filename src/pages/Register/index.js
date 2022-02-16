@@ -1,7 +1,7 @@
 import React from "react";
-import Pag1 from './pag1'
-import Pag2 from './pag2'
-import Pag3 from './pag3'
+import Pag1 from './pag1/index'
+import Pag2 from './pag2/index'
+import Pag3 from './pag3/index'
 import NavBar from '../Home/NavBar/nav_bar'
 import EndBar from '../GlobalComponets/EndBar'
 import "./styles/LoginTapOne.css"
@@ -27,7 +27,9 @@ class Register extends React.Component{
         this.updateIndex = this.updateIndex.bind(this);
         this.selectLayout = this.selectLayout.bind(this);
         this.addTag = this.addTag.bind(this);
-        this.removeTag = this.removeTag.bind(this);
+        this.removeTag = this.removeTag.bind(this);        
+        this.addAuthor = this.addAuthor.bind(this);
+        this.removeAuthor = this.removeAuthor.bind(this);
 
     }
 
@@ -62,6 +64,29 @@ class Register extends React.Component{
 
             return prevState;
         })
+    }    
+
+    // -------------------> ADD AUTHOR
+    addAuthor(id){ 
+
+        this.setState((prevState) => {
+            prevState.form.authors.push(id);
+            return prevState;
+        })
+    }
+
+    // -------------------> REMOVE AUTHOR
+    removeAuthor(id){
+        this.setState((prevState) => {
+            // remove tag that contains id passed
+            let authors = prevState.form.authors;
+            const newAuthors = authors.filter((author) => author != id);
+            
+            prevState.form.authors = newAuthors
+
+            return prevState;
+        })
+
     }
     
     // -------------------> SELECT LAYOUT 
@@ -76,7 +101,11 @@ class Register extends React.Component{
                     addTag={this.addTag} 
                     removeTag={this.removeTag} />
             case 3:
-                return <Pag3 updateIndex={this.updateIndex} form={this.state.form} />
+                return <Pag3 
+                    updateIndex={this.updateIndex} 
+                    authors={this.state.form.authors}
+                    addAuthor={this.addAuthor}
+                    removeAuthor={this.removeAuthor} />
         }
     }
     render() {

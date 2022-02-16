@@ -147,10 +147,6 @@ color: rgba(0, 0, 0, 0.7);
     border-style: none;
 }
 @media (max-width:1024px){
-    .page_rodape{
-      min-height: 100vh;
-      
-    }
     .page_rodape .content {
       flex-direction: column;
       height: 100%;

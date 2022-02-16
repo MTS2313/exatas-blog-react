@@ -1,0 +1,103 @@
+.col-card-author{
+    width: 25%;
+}
+
+@media  (min-width:800px) and (max-width:1000px) {
+    .col-card-author{
+        width: 33%;
+    }
+    
+}
+@media  (min-width:500px) and (max-width:800px) {
+    .col-card-author{
+        width: 50%;
+    }
+}
+
+@media  (max-width:500px){
+    .col-card-author{
+        width: 100%;
+    }
+}
+
+.col-card-author .card{
+    max-width: 232px;
+    width: 100%;
+    max-height: 314px;
+    height: 100%;
+    display: block;
+    margin:55px auto 0;
+    padding:22px 5px 0;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;   
+}
+
+.col-card-author .card.active{
+    background: rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 21px;
+}
+
+.col-card-author .card .card-profilepic{
+    max-height: 182px;
+    height: 100%;
+    max-width: 182px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.col-card-author .card .card-profilepic img{
+    width: 182px;
+    height: 182px;
+    object-fit:cover;
+    border-radius: 50%;
+}
+
+.col-card-author .card.active .card-profilepic::after{
+    content: url('../../../assets/svg/successIcon.svg');
+    width: 63px;
+    height: 63px;
+    background: #FFFFFF;
+    display: grid;
+    align-content: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+
+}
+
+.col-card-author .card .card-body{ 
+    margin-top: 12px ;
+    width: 100%;
+    text-align: center;
+}
+
+.col-card-author .card .card-body .text{
+    display: block;
+ }
+
+.col-card-author .card .card-body .name{
+    font-family: Pathway Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 31px;
+}
+
+.col-card-author .card .card-body .role{
+    font-family: Pathway Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.col-card-author{}
+.col-card-author{}

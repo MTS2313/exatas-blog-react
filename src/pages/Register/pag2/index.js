@@ -81,7 +81,7 @@ const Pag2 = ({ updateIndex, tags, addTag, removeTag }) => {
                     <div 
                     type="checkbox"  
                     className={"tag-model "+ (tags.includes(tag.id) && 'active')} 
-                    onClick={(e) => {onTagChange(e?.target, tag.id)}}>
+                    onClick={(e) => {onTagChange(e.target, tag.id)}}>
                         {tag.name}
                     </div>
                 ))}
