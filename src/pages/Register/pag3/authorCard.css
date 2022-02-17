@@ -54,6 +54,7 @@
     height: 182px;
     object-fit:cover;
     border-radius: 50%;
+    user-select: none;
 }
 
 .col-card-author .card.active .card-profilepic::after{
@@ -99,5 +100,35 @@
     color: rgba(0, 0, 0, 0.7);
 }
 
-.col-card-author{}
-.col-card-author{}
+.col-btn-showmore{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.col-btn-showmore button{
+    background-color: transparent;
+    color: #000;
+    padding: 15px 40px;
+    display: inline-flex;
+    align-items: center;
+    outline: none;
+    border: 1px solid #000;
+    font-family: 'Pathway Gothic One';
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease-in-out;
+}
+.col-btn-showmore button{
+    display: block;
+    margin: 0  auto;
+}
+.col-btn-showmore button:hover{
+    background-color: #000;
+    color: #fff;
+}
+.col-btn-showmore button::after{
+    content: 'v';
+    margin-left: 10px;
+}

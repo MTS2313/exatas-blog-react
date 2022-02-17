@@ -37,12 +37,42 @@ const authorsData = [
         fullname: 'Murilao enrolado',
         role: 'loja informática',
         selected: true
+    },
+    {
+        id:5,
+        imageUrl: 'https://media.istockphoto.com/photos/this-vacation-is-just-what-we-needed-picture-id639579050?b=1&k=20&m=639579050&s=170667a&w=0&h=eXDg8mhdvjn5jBxd5g3c1tt6D_ts9sVjtpF-FUBTq34=',
+        fullname: 'Damiste',
+        role: 'Biologo',
+        selected: false
+    },
+    {
+        id:6,
+        imageUrl: 'https://i.pinimg.com/736x/f6/e4/52/f6e452ba617b998e920a8a204ce1b74a.jpg',
+        fullname: 'Wolverine',
+        role: 'loja informática',
+        selected: true
+    },
+    {
+        id:7,
+        imageUrl: 'https://media.istockphoto.com/photos/headshot-portrait-of-smiling-ethnic-businessman-in-office-picture-id1300512215?b=1&k=20&m=1300512215&s=170667a&w=0&h=LsZL_-vvAHB2A2sNLHu9Vpoib_3aLLkRamveVW3AGeQ=',
+        fullname: 'Pedraun',
+        role: 'Biologo',
+        selected: false
+    },
+    {
+        id:8,
+        imageUrl: 'https://image.shutterstock.com/mosaic_250/2780032/1667439913/stock-photo-headshot-portrait-of-smiling-millennial-male-employee-talk-on-video-call-or-web-conference-in-1667439913.jpg',
+        fullname: 'hello kit',
+        role: 'loja informática',
+        selected: true
     }
 ]
 
 const Pag3 = ({updateIndex, authors, addAuthor, removeAuthor}) => {
 
     const [searchText, setSearchText] = useState(null);
+    const [showMoreCount, setShowMore] = useState(1);
+
 
     useEffect(() => {
         console.log(authors)
@@ -64,6 +94,29 @@ const Pag3 = ({updateIndex, authors, addAuthor, removeAuthor}) => {
     function onSearchInput(text){
         setSearchText(text)
     }
+
+    let authorsToDisplay = [];
+    let displayShowMore = false;
+    let authorsPerSection = 8; 
+    let authorsLimitDisplay = authorsPerSection * showMoreCount;
+    // map search
+    if(searchText){
+        authorsToDisplay = authorsData.filter(({role,fullname}) => {
+            let searchTextLowerCase = searchText.toLowerCase()
+            if(fullname.toLowerCase().includes(searchTextLowerCase) || role.toLowerCase().includes(searchTextLowerCase)){
+                return true;
+            }else return false;
+        }) 
+    }
+    else authorsToDisplay = authorsData;
+
+
+
+    // check if display show more
+    if(authorsToDisplay.length > authorsLimitDisplay ){
+        displayShowMore = true;
+    }
+
 
     return (
     <>
@@ -90,37 +143,26 @@ const Pag3 = ({updateIndex, authors, addAuthor, removeAuthor}) => {
             {/* /------------------------------------- ROW MIDDLE ------------------------------------- */}
             <div className="row row-authors">
                 <div className="authors-content">
-                    {authorsData.map(({imageUrl, fullname, role, id}) => {
-
-                        // if searchText is filled
-                        if(searchText){
-                            let searchTextLowerCase = searchText.toLowerCase()
-                            if(fullname.toLowerCase().includes(searchTextLowerCase) || role.toLowerCase().includes(searchTextLowerCase)){
-                                return(
-                                    <AuthorCard 
-                                    imageUrl={imageUrl} 
-                                    fullname={fullname} 
-                                    role={role} 
-                                    selected={authors.includes(id) ? true : false}
-                                    onAuthorChange={onAuthorChange}
-                                    id={id} />
-                                    )
-                                }
-                            }
-                                
-                        else{
-                                return(
-                                    <AuthorCard 
-                                    imageUrl={imageUrl} 
-                                    fullname={fullname} 
-                                    role={role} 
-                                    selected={authors.includes(id) ? true : false}
-                                    onAuthorChange={onAuthorChange}
-                                    id={id} />
-                                    ) 
-                            }
+                    {authorsToDisplay.map(({imageUrl, fullname, role, id}, index) => {
+                                if(index < authorsLimitDisplay){
+                                    return(
+                                        <AuthorCard 
+                                        imageUrl={imageUrl} 
+                                        fullname={fullname} 
+                                        role={role} 
+                                        selected={authors.includes(id) ? true : false}
+                                        onAuthorChange={onAuthorChange}
+                                        id={id} />
+                                        )
+                                    }
 
                     })}
+
+                    {displayShowMore && (
+                        <div className='col-btn-showmore'>
+                            <button onClick={() => {setShowMore(showMoreCount + 1)}}>Show More</button>
+                        </div>
+                    )}
                 </div>
             </div>
          </div>
