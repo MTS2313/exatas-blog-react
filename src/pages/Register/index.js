@@ -4,6 +4,7 @@ import Pag2 from './pag2/index'
 import Pag3 from './pag3/index'
 import NavBar from '../Home/NavBar/nav_bar'
 import EndBar from '../GlobalComponets/EndBar'
+import ProgressBar from './ProgressBar/index'
 import "./styles/LoginTapOne.css"
 
 class Register extends React.Component{
@@ -118,7 +119,9 @@ class Register extends React.Component{
                     <NavBar />
                 </header>
                 <section className="section_login">
+                    <ProgressBar index={this.state.pagIndex} />
                     
+
                     {
                     // ------------> SELECT LAYOUT
                     this.selectLayout()

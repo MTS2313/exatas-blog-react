@@ -1,0 +1,41 @@
+.progress-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.progress-container .bar-progress{
+    border-bottom: 2px solid black;
+}
+
+.progress-container .info{
+    max-width: 1440px;
+margin: 0 auto;
+padding-left: 10px;
+}
+.progress-container .info > *{
+    display: block;
+}
+.progress-container .info .progress{
+    font-family: Pathway Gothic One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 55px;
+    color: #000000;
+}
+
+.progress-container .info .progress-number{
+    font-family: Pathway Gothic One;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+/* identical to box height */
+
+color: rgba(0, 0, 0, 0.7);
+
+
+}

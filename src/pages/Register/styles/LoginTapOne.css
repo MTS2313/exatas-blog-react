@@ -4,6 +4,9 @@
     background: linear-gradient(326.17deg, rgba(0, 0, 0, 0.1) 40.03%, rgba(0, 0, 0, 0) 83.86%);
     flex-direction: column;
     padding: 40px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 .content_login{
     display: flex;
@@ -19,14 +22,20 @@
     display: flex;
     flex-direction: column;
     margin: 20px 0px;
+    max-width: 320px;
+    width: 100%;
 }
 .input_content label,input{
     margin: 10px 0px;
-    height: 40px;
-    width: 250px;
+    height: 60px;
+    max-height: 60px;
+    max-width: 320px;
+    width: 100%;
     outline: none;
     border-style: none;
-    background-color: #f8f8f8a8;
+    background: #F8F8F8;
+    box-sizing: border-box;
+    padding-left: 5px;
 }
 .input_content label{
     display: flex;

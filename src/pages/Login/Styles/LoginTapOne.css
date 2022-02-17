@@ -3,6 +3,9 @@
     justify-content: center;
     background: linear-gradient(326.17deg, rgba(0, 0, 0, 0.1) 40.03%, rgba(0, 0, 0, 0) 83.86%);
     flex-direction: column;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 .content_login{
     display: flex;
