@@ -1,0 +1,38 @@
+*{
+    font-family: 'Pathway Gothic One';
+}
+
+.btn{
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.text-btn{
+    background-color: transparent;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition:all 0.15s ease-in-out;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.text-btn:hover{
+    background-color: rgba(0, 0, 0, 0.07);
+    transition:all 0.15s ease-in-out;
+}
+.text-btn:active{
+    background-color: rgba(0, 0, 0, 0.1);
+    transition:all 0.15s ease-in-out;
+}
+.text-btn svg{
+    padding-left: 10px;
+    transition:all 0.15s ease-in-out;
+}
+.text-btn:hover svg {
+    transform: translate(10px, 0);
+    transition:all 0.15s ease-in-out;
+}
