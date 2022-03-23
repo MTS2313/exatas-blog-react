@@ -9,6 +9,7 @@ import ResertPassw from "./pages/LoginForgot/ResertPassw";
 import Blog from "./pages/Blog"
 import Post from "./pages/Post";
 import RegisterMain from "./pages/Register";
+import TestPage from "./pages/GlobalComponets/Footer/testpage";
 
 
 function Routes(){
@@ -23,6 +24,7 @@ function Routes(){
             <Route path="/blog" component={Blog}/>
             <Route exact path="/post" component={Post}/>
             <Route path="/register" component={RegisterMain} />
+            <Route path="/test" component={TestPage} />
         </Switch>
         </BrowserRouter>
     );
